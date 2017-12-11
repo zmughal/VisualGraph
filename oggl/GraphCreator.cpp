@@ -17,7 +17,7 @@ namespace oggl {
         int nodeCount = cols * rows;
 
 		ogdf::LayoutStandards::setDefaultEdgeStroke(
-			ogdf::Stroke(ogdf::Color::Black));
+			ogdf::Stroke(ogdf::Color::Name::Black));
 
         std::vector<ogdf::node> nodes(nodeCount);
 

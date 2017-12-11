@@ -24,6 +24,7 @@
 #include <oggl/Math.h>
 #include <oggl/GraphCreator.h>
 #include <ogdf/energybased/FMMMLayout.h>
+#include <ogdf/energybased/fmmm/FMMMOptions.h>
 #include <ogdf/basic/graph_generators.h>
 #include <ogdf/layered/DfsAcyclicSubgraph.h>
 #include <ogdf/fileformats/GraphIO.h>
@@ -348,7 +349,7 @@ void GraphWidget::ExecuteLayout()
 	fmmm.useHighLevelOptions(true);
 	fmmm.unitEdgeLength(g_defaultEdgeLength);
 	fmmm.newInitialPlacement(true);
-	fmmm.qualityVersusSpeed(ogdf::FMMMLayout::qvsNiceAndIncredibleSpeed);
+	fmmm.qualityVersusSpeed(ogdf::FMMMOptions::QualityVsSpeed::NiceAndIncredibleSpeed);
 
 	fmmm.call(m_graphAttributes);
 
@@ -392,7 +393,7 @@ void GraphWidget::Clear()
 {
 	m_graphPainter->SetGraphAttributes(nullptr);
 	m_graph.clear();
-	m_graphAttributes.initAttributes(m_graphAttributes.attributes());
+	m_graphAttributes.addAttributes(m_graphAttributes.attributes());
 	m_canvas->update();
 }
 

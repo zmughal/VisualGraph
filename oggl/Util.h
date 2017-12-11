@@ -97,39 +97,39 @@ namespace oggl {
     {
         switch (nodeType)
         {
-        case ogdf::Graph::vertex: return "vertex";
-        case ogdf::Graph::dummy: return "dummy";
-        case ogdf::Graph::generalizationMerger: return "generalizationMerger";
-        case ogdf::Graph::generalizationExpander: return "generalizationExpander";
-        case ogdf::Graph::highDegreeExpander: return "highDegreeExpander";
-        case ogdf::Graph::lowDegreeExpander: return "lowDegreeExpander";
-        case ogdf::Graph::associationClass: return "associationClass";
-        default: return "unknown";
+            case ogdf::Graph::NodeType::vertex: return "vertex";
+            case ogdf::Graph::NodeType::dummy: return "dummy";
+            case ogdf::Graph::NodeType::generalizationMerger: return "generalizationMerger";
+            case ogdf::Graph::NodeType::generalizationExpander: return "generalizationExpander";
+            case ogdf::Graph::NodeType::highDegreeExpander: return "highDegreeExpander";
+            case ogdf::Graph::NodeType::lowDegreeExpander: return "lowDegreeExpander";
+            case ogdf::Graph::NodeType::associationClass: return "associationClass";
+            default: return "unknown";
         }
     }
 
-	inline const char* ToString(const ogdf::Graph::EdgeType& edgeType)
-	{
+    inline const char* ToString(const ogdf::Graph::EdgeType& edgeType)
+    {
         switch (edgeType)
         {
-		case ogdf::Graph::association: return "association";
-		case ogdf::Graph::generalization: return "generalization";
-		case ogdf::Graph::dependency: return "dependency";
-		default: return "unknown";
+            case ogdf::Graph::EdgeType::association: return "association";
+            case ogdf::Graph::EdgeType::generalization: return "generalization";
+            case ogdf::Graph::EdgeType::dependency: return "dependency";
+            default: return "unknown";
         }
-	}
+    }
 
     inline const char* ToString(const ogdf::StrokeType& strokeType)
     {
         switch (strokeType)
         {
-        case ogdf::stNone: return "none";
-        case ogdf::stSolid: return "solid";
-		case ogdf::stDash: return "dash";
-		case ogdf::stDot: return "dotted";
-		case ogdf::stDashdot: return "dash-dot";
-		case ogdf::stDashdotdot: return "dash-dot-dot";
-		default: return "unknown";
+            case ogdf::StrokeType::None: return "none";
+            case ogdf::StrokeType::Solid: return "solid";
+            case ogdf::StrokeType::Dash: return "dash";
+            case ogdf::StrokeType::Dot: return "dotted";
+            case ogdf::StrokeType::Dashdot: return "dash-dot";
+            case ogdf::StrokeType::Dashdotdot: return "dash-dot-dot";
+            default: return "unknown";
         }
     }
 
@@ -137,34 +137,34 @@ namespace oggl {
     {
         switch (edgeArrow)
         {
-        case ogdf::eaNone: return "none";
-        case ogdf::eaLast: return "last";
-        case ogdf::eaFirst: return "first";
-        case ogdf::eaBoth: return "both";
-        case ogdf::eaUndefined: return "undefined";
+        case ogdf::EdgeArrow::None: return "none";
+        case ogdf::EdgeArrow::Last: return "last";
+        case ogdf::EdgeArrow::First: return "first";
+        case ogdf::EdgeArrow::Both: return "both";
+        case ogdf::EdgeArrow::Undefined: return "undefined";
         default: return "unknown";
         }
     }
 
     inline const char* NodeShapeToString(const ogdf::Shape& shape)
     {
-		switch (shape) {
-		case ogdf::shRect: return "shRect";
-		case ogdf::shRoundedRect: return "shRoundedRect";
-		case ogdf::shEllipse: return "shEllipse";
-		case ogdf::shTriangle: return "shTriangle";
-		case ogdf::shPentagon: return "shPentagon";
-		case ogdf::shHexagon: return "shHexagon";
-		case ogdf::shOctagon: return "shOctagon";
-		case ogdf::shRhomb: return "shRhomb";
-		case ogdf::shTrapeze: return "shTrapeze";
-		case ogdf::shParallelogram: return "shParallelogram";
-		case ogdf::shInvTriangle: return "shInvTriangle";
-		case ogdf::shInvTrapeze: return "shInvTrapeze";
-		case ogdf::shInvParallelogram: return "shInvParallelogram";
-		case ogdf::shImage: return "shImage";
-		default: return "unknown";
-		}
+        switch (shape) {
+            case ogdf::Shape::Rect: return "shRect";
+            case ogdf::Shape::RoundedRect: return "shRoundedRect";
+            case ogdf::Shape::Ellipse: return "shEllipse";
+            case ogdf::Shape::Triangle: return "shTriangle";
+            case ogdf::Shape::Pentagon: return "shPentagon";
+            case ogdf::Shape::Hexagon: return "shHexagon";
+            case ogdf::Shape::Octagon: return "shOctagon";
+            case ogdf::Shape::Rhomb: return "shRhomb";
+            case ogdf::Shape::Trapeze: return "shTrapeze";
+            case ogdf::Shape::Parallelogram: return "shParallelogram";
+            case ogdf::Shape::InvTriangle: return "shInvTriangle";
+            case ogdf::Shape::InvTrapeze: return "shInvTrapeze";
+            case ogdf::Shape::InvParallelogram: return "shInvParallelogram";
+            case ogdf::Shape::Image: return "shImage";
+            default: return "unknown";
+        }
     }
 
     inline int CharToInt(char c)
